@@ -6,7 +6,7 @@ const ItemColores = ({ color, borrarColor }) => {
       style={{
         width: "20rem",
         backgroundColor: "rgba(255, 255, 255, 0.2)",
-        backdropFilter: "blur(5px)",
+        // backdropFilter: "blur(5px)",
         borderRadius: "10px",
         boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
         border: "1px solid rgba(255, 255, 255, 0.3)",
@@ -16,13 +16,12 @@ const ItemColores = ({ color, borrarColor }) => {
         <div
           style={{
             background: color,
-            width: "100%",
             height: "190px",
             border: "1px solid #000",
+            borderRadius: "5px",
             marginBottom: "10px",
           }}
         ></div>
-        <p>{color}</p>
         <Button
           variant="outline-danger"
           onClick={() => borrarColor(color)}
@@ -38,6 +37,7 @@ const ItemColores = ({ color, borrarColor }) => {
         >
           <BsXCircle /> Borrar
         </Button>
+        <p className="text-light mt-2">{color}</p>
       </Card.Body>
     </Card>
   );
